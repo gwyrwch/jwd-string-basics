@@ -5,15 +5,19 @@ import by.epamtc.jwd.util.Pair;
 public class Task2 {
     private static Pair<Double, Double> countPercentageOfLowercaseAndUppercase(String str) {
         int lowercaseCount = 0;
+        int uppercaseCount = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            if (Character.isLowerCase(str.charAt(i))) {
-                lowercaseCount += 1;
+            char current = str.charAt(i);
+            if (Character.isLowerCase(current)) {
+                lowercaseCount++;
+            } else if (Character.isUpperCase(current)) {
+                uppercaseCount++;
             }
         }
 
         double lowercasePercentage = 1d * lowercaseCount / str.length();
-        double uppercasePercentage = 1d * (str.length() - lowercaseCount) / str.length();
+        double uppercasePercentage = 1d * uppercaseCount / str.length();
 
         return new Pair<>(lowercasePercentage, uppercasePercentage);
     }

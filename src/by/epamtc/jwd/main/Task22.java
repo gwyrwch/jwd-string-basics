@@ -2,7 +2,7 @@ package by.epamtc.jwd.main;
 
 public class Task22 {
     private static String removeWordsWithGivenLength(String str, int length) {
-        String[] tokens = str.split("\\W+");
+        String[] tokens = str.split("[^\\w']+");
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < tokens.length; i++) {
@@ -23,7 +23,6 @@ public class Task22 {
         int length = 4;
 
         String ans = removeWordsWithGivenLength(str, length);
-
         System.out.printf("string: %s\nwithout words with length %d: %s\n", str, length, ans);
     }
 }

@@ -4,9 +4,9 @@ import static by.epamtc.jwd.util.Util.buildStringFromArray;
 
 public class Task16 {
     private static String swapWords(String str, String fWord, String sWord) {
-        String[] tokens = str.split("\\W+");
-        int fWordIndex = 0;
-        int sWordIndex = 0;
+        String[] tokens = str.split("[^\\w']+");
+        int fWordIndex = -1;
+        int sWordIndex = -1;
 
         for (int i = 0; i < tokens.length; i++) {
             if (tokens[i].equals(fWord)) {
@@ -15,6 +15,10 @@ public class Task16 {
             if (tokens[i].equals(sWord)) {
                 sWordIndex = i;
             }
+        }
+
+        if (fWordIndex == -1 || sWordIndex == -1) {
+            return str;
         }
 
         tokens[fWordIndex] = sWord;

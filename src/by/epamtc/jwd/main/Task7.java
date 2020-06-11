@@ -6,13 +6,19 @@ public class Task7 {
             return null;
         }
 
+        // all substring occurrences are replaced
         return str.replace(substr, "");
     }
 
     public static void main(String[] args) {
         String str = "Where there's a will, there's a way.";
         String strToDelete = "way";
+
         String ans = deleteSubstring(str, strToDelete);
+        if (ans == null) {
+            System.out.println("No such substring in given string");
+            return;
+        }
 
         System.out.printf("string: %s\nstring without substr: %s\n", str, ans);
     }

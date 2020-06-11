@@ -3,7 +3,7 @@ package by.epamtc.jwd.main;
 public class Task11 {
     private static String reverseWords(String str) {
         StringBuilder res = new StringBuilder();
-        String[] tokens = str.split(" ");
+        String[] tokens = str.split("[^\\w']+");
 
 
         for (int i = tokens.length - 1; i >= 0; i--) {

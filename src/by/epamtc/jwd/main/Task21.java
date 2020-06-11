@@ -53,6 +53,3 @@ public class Task21 {
         System.out.printf("%s + %s = %s\n", fNum, sNum, ans);
     }
 }
-
-// 19211838578998
-// 19211838578998

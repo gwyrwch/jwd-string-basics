@@ -2,7 +2,7 @@ package by.epamtc.jwd.main;
 
 public class Task14 {
     private static int getLengthOfShortestWord(String str) {
-        String[] tokens = str.split(" ");
+        String[] tokens = str.split("[^\\w']+");
         int minLength = Integer.MAX_VALUE;
 
         for (String token : tokens) {

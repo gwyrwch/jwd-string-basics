@@ -2,9 +2,8 @@ package by.epamtc.jwd.main;
 
 public class Task19 {
     private static boolean isPalindrome(String str) {
-        str = str.replaceAll("\\W+", "");
+        str = str.replaceAll("[^\\w']+", "");
         String reversed = new StringBuilder(str).reverse().toString();
-        reversed = reversed.replaceAll("\\s+", "");
 
         return str.equalsIgnoreCase(reversed);
     }

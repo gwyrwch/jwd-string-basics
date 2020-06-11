@@ -14,7 +14,12 @@ public class Task8 {
         String str = "Where there's a will, there's a way.";
         int begin = 0;
         int end = 3;
+
         String ans = copySubstring(str, begin, end);
+        if (ans == null) {
+            System.out.println("Incorrect begin or end was given.");
+            return;
+        }
 
         System.out.printf("string: %s\nsubstr [%d, %d]: %s\n", str, begin, end, ans);
     }
