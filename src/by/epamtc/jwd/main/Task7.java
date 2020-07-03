@@ -15,6 +15,7 @@ public class Task7 {
         String strToDelete = "way";
 
         String ans = deleteSubstring(str, strToDelete);
+
         if (ans == null) {
             System.out.println("No such substring in given string");
             return;

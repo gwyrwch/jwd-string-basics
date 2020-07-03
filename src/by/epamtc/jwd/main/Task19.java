@@ -2,7 +2,9 @@ package by.epamtc.jwd.main;
 
 public class Task19 {
     private static boolean isPalindrome(String str) {
-        str = str.replaceAll("[^\\w']+", "");
+        final String SPLIT_REGEX = "[^\\w']+";
+
+        str = str.replaceAll(SPLIT_REGEX, "");
         String reversed = new StringBuilder(str).reverse().toString();
 
         return str.equalsIgnoreCase(reversed);

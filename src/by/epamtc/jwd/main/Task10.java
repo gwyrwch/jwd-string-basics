@@ -7,10 +7,11 @@ public class Task10 {
 
         while (true) {
             index = str.indexOf(substr, index);
-            if (index == -1)
+            if (index == -1) {
                 break;
-            index += substr.length();
+            }
 
+            index += substr.length();
             count++;
         }
 

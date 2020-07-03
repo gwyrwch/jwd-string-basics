@@ -16,6 +16,7 @@ public class Task8 {
         int end = 3;
 
         String ans = copySubstring(str, begin, end);
+
         if (ans == null) {
             System.out.println("Incorrect begin or end was given.");
             return;

@@ -8,7 +8,7 @@ public class Task1 {
         StringBuilder evenCharacters = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
-            if(str.codePointAt(i) % 2 == 0) {
+            if (str.codePointAt(i) % 2 == 0) {
                 evenCharacters.append(str.charAt(i));
             } else {
                 oddCharacters.append(str.charAt(i));

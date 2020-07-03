@@ -14,6 +14,7 @@ public class Task2 {
             } else if (Character.isUpperCase(current)) {
                 uppercaseCount++;
             }
+            // else there are symbols like .,?! and other
         }
 
         double lowercasePercentage = 1d * lowercaseCount / str.length();

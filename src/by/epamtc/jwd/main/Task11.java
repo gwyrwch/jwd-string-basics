@@ -2,9 +2,10 @@ package by.epamtc.jwd.main;
 
 public class Task11 {
     private static String reverseWords(String str) {
-        StringBuilder res = new StringBuilder();
-        String[] tokens = str.split("[^\\w']+");
+        final String SPLIT_REGEX = "[^\\w']+";
 
+        StringBuilder res = new StringBuilder();
+        String[] tokens = str.split(SPLIT_REGEX);
 
         for (int i = tokens.length - 1; i >= 0; i--) {
             res.append(tokens[i]);

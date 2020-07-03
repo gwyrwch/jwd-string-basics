@@ -4,7 +4,11 @@ import static by.epamtc.jwd.util.Util.buildStringFromArray;
 
 public class Task13 {
     private static String replaceCharactersInLongestWord(String str) {
-        String[] tokens = str.split("[^\\w']+");
+        final String SPLIT_REGEX = "[^\\w']+";
+        final String TO_REPLACE = "a";
+        final String REPLACEMENT = "b";
+
+        String[] tokens = str.split(SPLIT_REGEX);
         int indexOfLongestWord = 0;
         int maxLength = 0;
 
@@ -15,7 +19,7 @@ public class Task13 {
             }
         }
 
-        tokens[indexOfLongestWord] = tokens[indexOfLongestWord].replaceAll("a", "b");
+        tokens[indexOfLongestWord] = tokens[indexOfLongestWord].replaceAll(TO_REPLACE, REPLACEMENT);
 
         return buildStringFromArray(tokens);
     }

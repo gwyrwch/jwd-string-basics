@@ -2,7 +2,9 @@ package by.epamtc.jwd.main;
 
 public class Task24 {
     private static String[] splitStringIntoWords(String str) {
-        return str.split("[^\\w']+");
+        final String SPLIT_REGEX = "[^\\w']+";
+
+        return str.split(SPLIT_REGEX);
     }
 
     public static void main(String[] args) {

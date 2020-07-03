@@ -2,7 +2,9 @@ package by.epamtc.jwd.main;
 
 public class Task23 {
     private static String removeExtraSpaces(String str) {
-        str = str.replaceAll("\\s+"," ");
+        final String SPACE_SEQUENCE_REGEX = "\\s+";
+
+        str = str.replaceAll(SPACE_SEQUENCE_REGEX," ");
 
         return str.trim();
     }

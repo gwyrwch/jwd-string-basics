@@ -2,7 +2,9 @@ package by.epamtc.jwd.main;
 
 public class Task15 {
     private static int countWordsAmount(String str) {
-        return str.split("[^\\w']+").length;
+        final String SPLIT_REGEX = "[^\\w']+";
+
+        return str.split(SPLIT_REGEX).length;
     }
 
     public static void main(String[] args) {

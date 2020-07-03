@@ -2,7 +2,9 @@ package by.epamtc.jwd.main;
 
 public class Task22 {
     private static String removeWordsWithGivenLength(String str, int length) {
-        String[] tokens = str.split("[^\\w']+");
+        final String SPLIT_REGEX = "[^\\w']+";
+
+        String[] tokens = str.split(SPLIT_REGEX);
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < tokens.length; i++) {
